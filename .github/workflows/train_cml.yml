@@ -19,7 +19,7 @@ jobs:
         with:
           path: |
             ~/.cache/pip
-            ~/venv  # Assuming you create a virtual environment
+            ~/venv  
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
@@ -67,7 +67,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git checkout -b update-readme  # Create and switch to a new branch
           git add README.md
           git commit -m "Update README by GitHub Actions"
-          git push
+          git push origin update-readme  # Push the new branch to the remote repository
 
