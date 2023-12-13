@@ -70,6 +70,7 @@ jobs:
           git checkout -b update-readme  # Create and switch to a new branch
           git add README.md
           git commit -m "Update README by GitHub Actions"
+          git config pull.rebase false
           git pull origin update-readme --allow-unrelated-histories
           git push origin update-readme  # Push the new branch to the remote repository
 
