@@ -1,1 +1,1 @@
-This is the output report:
+This is the output CML report:
