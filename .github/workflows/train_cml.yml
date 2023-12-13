@@ -62,3 +62,12 @@ jobs:
 
           # Create comment from markdown report
           cml comment create model_eval_report.md
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README by GitHub Actions"
+          git push
+
