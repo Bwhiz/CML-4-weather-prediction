@@ -71,6 +71,7 @@ jobs:
           git add README.md
           git commit -m "Update README by GitHub Actions"
           git pull origin update-readme
-          git merge origin/update-readme
+          #git merge origin/update-readme
+          git config pull.rebase false
           git push origin update-readme  # Push the new branch to the remote repository
 
